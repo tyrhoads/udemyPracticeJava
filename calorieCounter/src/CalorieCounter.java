@@ -11,17 +11,17 @@ public class CalorieCounter
         Scanner scan = new Scanner(System.in);
         System.out.println("First food item");
          food1 = scan.nextLine();
-        System.out.println("Now enter calorie amount");
+        System.out.println("Now enter calorie amount for " +food1);
         calorieFood1 = scan.nextInt();
         scan.nextLine();
         System.out.println("Second food item");
         food2 = scan.nextLine();
-        System.out.println("Now enter calorie amount");
+        System.out.println("Now enter calorie amount for " +food2);
         calorieFood2 = scan.nextInt();
         scan.nextLine();
         System.out.println("Third food item");
         food3 = scan.nextLine();
-        System.out.println("Now enter calorie amount");
+        System.out.println("Now enter calorie amount for " +food3);
         calorieFood3 = scan.nextInt();
         scan.nextLine();
 
