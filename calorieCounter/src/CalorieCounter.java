@@ -1,6 +1,12 @@
+import java.util.Scanner;
+
 public class CalorieCounter
+{
+    public static void main(String[] args)
     {
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        Scanner scan = new Scanner(System.in);
+
+        int calorie = scan.nextInt();
+        System.out.println(calorie);
     }
-    }
+}
