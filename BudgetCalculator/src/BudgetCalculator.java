@@ -30,10 +30,10 @@ public class BudgetCalculator {
         double remainingBudget = income-totalExpenses; // COMPLETE THIS PART
 
         // Step 6: Calculate percentage spent per category
-        double rentPercentage = // COMPLETE THIS PART
-        double groceriesPercentage = // COMPLETE THIS PART
-        double transportationPercentage = // COMPLETE THIS PART
-        double entertainmentPercentage = // COMPLETE THIS PART
+        double rentPercentage = (rent/income)*100;// COMPLETE THIS PART
+        double groceriesPercentage = (groceries/income)*100;// COMPLETE THIS PART
+        double transportationPercentage =(transportation/income)*100; // COMPLETE THIS PART
+        double entertainmentPercentage = (entertainment/income)*100;// COMPLETE THIS PART
 
                 // Step 7: Display formatted budget summary
         System.out.println("\n********** Budget Summary **********");
