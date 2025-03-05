@@ -24,10 +24,10 @@ public class BudgetCalculator {
         double entertainment = scanner.nextDouble();
 
         // Step 4: Calculate total expenses
-        double totalExpenses = // COMPLETE THIS PART
+        double totalExpenses = rent+groceries+entertainment+transportation;// COMPLETE THIS PART
 
         // Step 5: Calculate remaining budget
-        double remainingBudget = // COMPLETE THIS PART
+        double remainingBudget = income-totalExpenses; // COMPLETE THIS PART
 
         // Step 6: Calculate percentage spent per category
         double rentPercentage = // COMPLETE THIS PART
@@ -36,7 +36,7 @@ public class BudgetCalculator {
         double entertainmentPercentage = // COMPLETE THIS PART
 
                 // Step 7: Display formatted budget summary
-                System.out.println("\n********** Budget Summary **********");
+        System.out.println("\n********** Budget Summary **********");
         System.out.printf("Monthly Income: $%.2f\n", income);
         System.out.printf("Total Expenses: $%.2f\n", totalExpenses);
         System.out.printf("Remaining Budget: $%.2f\n", remainingBudget);
