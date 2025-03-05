@@ -31,6 +31,17 @@ public class StringManipulation
 
                 // Compare the two sentences using equals and equalsIgnoreCase
                 //TODO
+                if(sentence.equals(secondSentence))
+                {
+                    System.out.println("The two sentences are the same.");
+                }
+
+                else if (sentence.equalsIgnoreCase(secondSentence)){
+                    System.out.println("The two sentences are the same, ignoring case (equalsIgnoreCase).");
+                }
+                else {
+                    System.out.println("The sentences do not match");
+                }
 
                 // Lexicographical comparison using compareTo
                 //TODO
