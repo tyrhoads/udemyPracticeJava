@@ -45,9 +45,25 @@ public class StringManipulation
 
                 // Lexicographical comparison using compareTo
                 //TODO
-
+                int comparison = sentence.compareTo(secondSentence);
+                if(comparison == 0){
+                    System.out.println("The sentences are the same ");
+                }
+                else if (comparison>0){
+                    System.out.println("The first sentence is greater than the second");
+                }
+                else {
+                    System.out.println("The second sentence is greater");
+                }
                 // Demonstrate substring and replace methods
                 //TODO
+                System.out.println("Enter a word to replace in the first sentence,");
+                String wordToReplacement = scanner.nextLine();
+                System.out.println("Enter the word you want to repalce it with,");
+                String replacmentWord = scanner.nextLine();
+                String modifiedSentence = sentence.replace(wordToReplacement,replacmentWord);
+                System.out.println(modifiedSentence);
+
 
                 // Convert sentence to upper and lower case
                 //TODO
