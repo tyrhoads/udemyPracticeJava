@@ -70,6 +70,9 @@ public class StringManipulation
 
                 // Formatting with strings and numbers
                 //TODO
+            System.out.println("\nEnter an interest rate (e.g., 5.5):");
+            double interestRate = scanner.nextDouble();
+            System.out.printf("The formatted interest rate is: %.2f\n", interestRate);
         }
     }
 
