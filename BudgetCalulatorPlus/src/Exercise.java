@@ -19,7 +19,7 @@ public class Exercise {
         // Remember to consume the newline left-over
         System.out.println("Enter the number of expenses: ");
         int numberOfExpenses = scan.nextInt();
-
+        scan.nextLine();
         // Loop to track each expense
         int counter = 0;
         while (counter < numberOfExpenses)
@@ -51,6 +51,7 @@ public class Exercise {
         {
             System.out.println("Get your shit together.");
         }
+        scan.close();
     }
     public static void main(String[] args) {
         Exercise.budgetTracker();
