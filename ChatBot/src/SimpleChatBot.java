@@ -7,30 +7,30 @@ public class SimpleChatBot {
         Scanner scanner = new Scanner(System.in);
 
         // Step 2: Prompt the user for input
-        System.out.println("Please enter something: ");
+        System.out.println("Please enter something and enter exit when you want the end ");
         String userInput = scanner.nextLine(); // Read user input
-
-        // Step 3: Process user input using conditional statements
-        if (userInput.equalsIgnoreCase("hello") || userInput.equalsIgnoreCase("hi"))
-        {
-            System.out.println("Chatbot: Hello! How can I help you today?");
-        } else if ()
-        {
-            System.out.println("Chatbot: I'm just a bot, but I'm here to help you!");
+        while (!userInput.equals("exit")) {
+            // Step 3: Process user input using conditional statements
+            if (userInput.equalsIgnoreCase("exit")){
+                break;
+            }
+            else if (userInput.equalsIgnoreCase("hello") || userInput.equalsIgnoreCase("hi")) {
+                System.out.println("Chatbot: Hello! How can I help you today?");
+                userInput = scanner.nextLine();
+            } else if (userInput.equalsIgnoreCase("what are you")) {
+                System.out.println("Chatbot: I'm just a bot, but I'm here to help you!");
+                userInput = scanner.nextLine();
+            } else if (userInput.equalsIgnoreCase("What is the weather")) {
+                System.out.println("Chatbot: I don’t have real-time weather data, but it's always sunny in the digital world!");
+                userInput = scanner.nextLine();
+            } else if (userInput.equalsIgnoreCase("goodbye") || userInput.equalsIgnoreCase("bye")) {
+                System.out.println("Chatbot: Goodbye! Have a great day!");
+                userInput = scanner.nextLine();
+            } else {
+                System.out.println("Chatbot: I'm sorry, I don't understand that.");
+                userInput = scanner.nextLine();
+            }
         }
-        else if ()
-        {
-            System.out.println("Chatbot: I don’t have real-time weather data, but it's always sunny in the digital world!");
-        }
-        else if ()
-        {
-            System.out.println("Chatbot: Goodbye! Have a great day!");
-        }
-        else
-        {
-            System.out.println("Chatbot: I'm sorry, I don't understand that.");
-        }
-
         // Step 4: Close Scanner
         scanner.close();
         }
