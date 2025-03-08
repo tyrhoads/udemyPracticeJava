@@ -21,10 +21,45 @@ public class GalaxyWeatherAdvisor {
 
 
                 // Step 5: Declare a variable to store response
-                String advice = "dfdf";
+                String advice = "";
 
         // Step 6: Compute response based on planet and temperature
-        //MISSING
+       if (planet.equalsIgnoreCase("earth"))
+       {
+          if (temperature < 15){
+              advice = "put on a damn jacket";
+          }
+          else {
+              advice = "you are good to got";
+          }
+       }
+       else if(planet.equalsIgnoreCase("mars")){
+           if (temperature < 15){
+               advice = "put on a damn jacket";
+           }
+           else {
+               advice = "you are good to got";
+           }
+       }
+       else if(planet.equalsIgnoreCase("venus")){
+           if (temperature < 15){
+               advice = "put on a damn jacket";
+           }
+           else {
+               advice = "you are good to got";
+           }
+       }
+       else if(planet.equalsIgnoreCase("jupiter")){
+           if (temperature < -15){
+               advice = "put on a damn jacket";
+           }
+           else {
+               advice = "you are good to got";
+           }
+       }
+       else {
+           advice = "unknown plant";
+       }
 
         // Step 7: Display response
         System.out.println(advice);
