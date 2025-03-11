@@ -14,16 +14,16 @@ public class Adventure {
         // Introduction to the game
         System.out.println("Welcome to the Ultimate Adventure Game!");
         System.out.println("You find yourself in a dark forest. Choose a direction to explore.");
-        System.out.println("North , South , East or West....or Quit to exit");
+
         String userInput = "tester";
         while(!userInput.equalsIgnoreCase("QUIT"))
         {
-
+            System.out.println("North , South , East or West....or Quit to exit");
             userInput = scan.nextLine().toUpperCase();
             try {
                 direction = Direction.valueOf(userInput);
             }
-            catch (IllegalArgumentException e)
+            catch (Exception e)
             {
                 System.out.println("Please pick a valid entry");
                 continue;
@@ -32,20 +32,19 @@ public class Adventure {
             {
                 case NORTH:
                     System.out.println("You went North and saw a Woman bathing nude in the river");
+                    System.out.println("Her Husband see you and chases you off ");
                     break;
                 case SOUTH:
-                    System.out.println("You went North and saw a Woman bathing nude in the river");
+                    System.out.println("You find a sexy elf maiden and have a night of vigorous love making");
                     break;
                 case EAST:
-                    System.out.println("You went North and saw a Woman bathing nude in the river");
+                    System.out.println("You fall off a cliff");
                     break;
                 case WEST:
-                    System.out.println("You went North and saw a Woman bathing nude in the river");
+                    System.out.println("You find treasure");
                     break;
 
             }
-            System.out.println("North , South , East or West....or Quit to exit");
-            userInput = scan.nextLine().toUpperCase();
 
 
         }
