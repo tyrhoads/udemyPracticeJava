@@ -23,9 +23,13 @@ public class FibonacciCalulator
             System.out.print(firstNumber + "," + secondNumber);
             int nextNumber;
 
-            for(int i; i < userInput; i++)
+            for(int i = 0; i < userInput; i++)
             {
-                nextNumber =
+                nextNumber = firstNumber + secondNumber;
+
+                System.out.print( "," + nextNumber);
+                firstNumber = secondNumber;
+                secondNumber = nextNumber;
 
             }
         }
