@@ -8,9 +8,26 @@ public class FibonacciCalulator
         System.out.println("Please enter a number for  Fibonacci sequence");
         int userInput = scan.nextInt();
         scan.nextLine();
+        int firstNumber = 0;
+        int secondNumber = 1;
         if(userInput == 1)
         {
-            System.out.print(0);
+            System.out.print(firstNumber);
+        }
+        else if (userInput == 2)
+        {
+            System.out.print(firstNumber + "," + secondNumber);
+        }
+        else
+        {
+            System.out.print(firstNumber + "," + secondNumber);
+            int nextNumber;
+
+            for(int i; i < userInput; i++)
+            {
+                nextNumber =
+
+            }
         }
 
     }
