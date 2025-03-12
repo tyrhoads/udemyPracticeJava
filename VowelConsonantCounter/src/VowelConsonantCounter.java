@@ -5,11 +5,11 @@ public class VowelConsonantCounter
 
     public static void main(String[] args) {
         // Step 1: Declare and initialize Scanner object
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         // Step 2: Prompt the user for input
         System.out.println("Enter a string:");
-        String input = scanner.nextLine();
+        String input = scan.nextLine();
 
         // Step 3: Initialize vowel and consonant counters
         int vowels = 0, consonants = 0;
@@ -21,9 +21,9 @@ public class VowelConsonantCounter
 
             // Step 5: Ask user if they want to continue or exit (COMPLETE THIS PART)
             System.out.println("Do you want to continue? (yes to continue, no to exit)");
-            String userChoice = scanner.nextLine();
+            String userChoice = scan.nextLine();
 
-            if (0 == 0) {
+            if (userChoice.equalsIgnoreCase("no")) {
                 break; // Exit loop early
             }
 
@@ -33,9 +33,11 @@ public class VowelConsonantCounter
             }
 
             // Step 7: Determine if character is a vowel or consonant (COMPLETE THIS PART)
-            if (0 == 0) {
+            if (vowelsList.indexOf(ch) != -1) {
+
                 vowels++;
             } else {
+                System.out.println(vowelsList.indexOf(ch));
                 consonants++;
             }
         }
@@ -45,7 +47,7 @@ public class VowelConsonantCounter
         System.out.println("Total consonants: " + consonants);
 
 // Step 9: Close Scanner
-        scanner.close();
+        scan.close();
 
 
     }
