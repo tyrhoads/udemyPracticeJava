@@ -23,7 +23,7 @@ public class FibonacciCalulator
             System.out.print(firstNumber + "," + secondNumber);
             double nextNumber;
 
-            for(int i = 0; i < userInput; i++)
+            for(int i = 2; i < userInput; i++)
             {
                 nextNumber = firstNumber + secondNumber;
 
