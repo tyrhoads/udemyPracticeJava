@@ -4,13 +4,10 @@ import java.util.Random;
 
 public class ArrayShuffleAndOperations
 {
-    public static void main(String[] args)
-    {
-
-    }
+    int[] numbers = {12, 43, 56, 78, 34, 23, 89, 90, 65, 31};
     public void arrayShuffleAndOperations() {
         // Declare and initialize an array with 10 integers
-        int[] numbers = {12, 43, 56, 78, 34, 23, 89, 90, 65, 31};
+
 
         // Display the original array
         // Shuffle the array
@@ -30,7 +27,7 @@ public class ArrayShuffleAndOperations
     }
 
     // Method to calculate the sum of the array
-    public static int calculateSum(int[] array) {
+    public  int calculateSum(int[] array) {
         //TODO
         return 0;
     }
@@ -45,5 +42,11 @@ public class ArrayShuffleAndOperations
     public int findMax(int[] array) {
         //TODO
         return 0;
+    }
+    public static void main(String[] args)
+    {
+        ArrayShuffleAndOperations obj = new ArrayShuffleAndOperations();
+        obj.findMax(obj.numbers);
+
     }
 }
