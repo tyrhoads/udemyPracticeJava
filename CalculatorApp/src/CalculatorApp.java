@@ -9,27 +9,49 @@ public class CalculatorApp
         String continueCalculator;
 
         do {
+            System.out.println("Enter the first number: ");
+            float firstNumber = scan.nextInt();
+            scan.nextLine();
+            System.out.println("Enter the second number: ");
+            float secondNumber = scan.nextInt();
+            scan.nextLine();
+            System.out.println("Choose an operation (+, -, *, /): ");
+            char operationChoice = scan.next().charAt(0);
+            scan.nextLine();
+            switch (operationChoice)
+            {
+                case '+':
+                    System.out.println(firstNumber+secondNumber);
+                    break;
+                case '-':
+                    System.out.println(firstNumber-secondNumber);
+                    break;
+                case '*':
+                    System.out.println(firstNumber*secondNumber);
+                    break;
+                case '/':
+                    if (secondNumber != 0) {
+                        System.out.println(firstNumber / secondNumber);
+                    }
+                    else {
+                        System.out.println("cant divideby zero");
+                    }
+                    break;
+                default:
+                    System.out.println("incorrect operation added");
+                    break;
+            }
+
             System.out.println("Do you want to perform another calculation? (yes/no):");
             continueCalculator = scan.nextLine();
 
 
 
 
-            if (continueCalculator.equalsIgnoreCase("no"))
-            {
-                System.out.println("Calculator session ended. Goodbye!");
 
-            }
 
         }
         while (!continueCalculator.equalsIgnoreCase("no"));
-        // Infinite loop to keep the calculator running until the user decides to quit
-        // Prompt the user to enter two numbers
-        // Prompt the user to choose an operation
-        // Perform the selected operation using a switch statement
-        // Display the result if the operation was valid
-        // Ask the user if they want to perform another calculation
-        //TODO
 
 
         // End the program
