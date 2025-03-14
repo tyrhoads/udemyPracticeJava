@@ -7,7 +7,7 @@ public class ArrayShuffleAndOperations
     int[] numbers = {12, 43, 56, 78, 34, 23, 89, 90, 65, 31};
     public void arrayShuffleAndOperations() {
         // Declare and initialize an array with 10 integers
-
+        System.out.println(calculateSum(numbers));
 
         // Display the original array
         // Shuffle the array
@@ -21,15 +21,18 @@ public class ArrayShuffleAndOperations
     public void shuffleArray(int[] array) {
         Random random = new Random();
         for (int i = array.length - 1; i > 0; i--) {
-            // Swap the elements
+
             //TODO
         }
     }
 
     // Method to calculate the sum of the array
     public  int calculateSum(int[] array) {
-        //TODO
-        return 0;
+       int result = 0;
+        for (int i: array){
+            result += i;
+        }
+        return result;
     }
 
     // Method to find the minimum value in the array
@@ -46,7 +49,7 @@ public class ArrayShuffleAndOperations
     public static void main(String[] args)
     {
         ArrayShuffleAndOperations obj = new ArrayShuffleAndOperations();
-        obj.findMax(obj.numbers);
+        obj.arrayShuffleAndOperations();
 
     }
 }
