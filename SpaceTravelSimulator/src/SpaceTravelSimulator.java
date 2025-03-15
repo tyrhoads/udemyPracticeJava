@@ -40,9 +40,9 @@ public class SpaceTravelSimulator
                     System.out.print("Enter mission status (On mission / Available): ");
                     String status = scanner.nextLine();
 
-                    astronautNames[numAstronauts] = // COMPLETE THIS PART
-                    astronautAges[numAstronauts] = // COMPLETE THIS PART
-                    missionStatus[numAstronauts] = // COMPLETE THIS PART
+                    astronautNames[numAstronauts] = name;
+                    astronautAges[numAstronauts] = age;
+                    missionStatus[numAstronauts] = status;
                     numAstronauts++;
 
                     System.out.println(name + " added to the mission.");
@@ -56,7 +56,7 @@ public class SpaceTravelSimulator
 
                     for (int i = 0; i < numAstronauts; i++)
                     {
-                        if (astronautName == )
+                        if (astronautName.equalsIgnoreCase(astronautNames[i]))
                         {
                         System.out.print("Enter new mission status (On mission / Available): ");
                         missionStatus[i] = scanner.nextLine();
@@ -75,7 +75,7 @@ public class SpaceTravelSimulator
                 case 3:
                 // Display astronauts (COMPLETE THIS PART)
                 System.out.println("All Astronauts:");
-                if ()
+                if (numAstronauts == 0)
                 {
                 System.out.println("No astronauts added to the mission yet.");
                 }
