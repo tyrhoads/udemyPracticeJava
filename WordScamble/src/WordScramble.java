@@ -21,7 +21,7 @@ public class WordScramble {
             System.out.println(shuffled + pointCounter);
 
 
-    }sdf
+    }
 
 
 
