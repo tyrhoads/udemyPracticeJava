@@ -15,13 +15,13 @@ public class WordScramble {
            // String guess = scan.nextLine();
             while (!wordCompare(word,shuffled)){
                 System.out.println(shuffled);
-                shuffled = shuffleWord(word);
+                shuffled = shuffleWord(shuffled);
                 pointCounter++;
             }
             System.out.println(shuffled + pointCounter);
 
 
-    }
+    }sdf
 
 
 
