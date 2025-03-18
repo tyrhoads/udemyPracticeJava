@@ -7,29 +7,20 @@ public class WordScramble {
         int pointCounter = 0;
         String userInput;
         Scanner scan = new Scanner(System.in);
-        do {
+
             String word = getWord();
             String shuffled = shuffleWord(word);
             System.out.println(shuffled);
-            System.out.println("Please take a guess the word...");
-            String guess = scan.nextLine();
-            if (wordCompare(word,guess))
-            {
+            //System.out.println("Please take a guess the word...");
+           // String guess = scan.nextLine();
+            while (!wordCompare(word,shuffled)){
+                System.out.println(shuffled);
+                shuffled = shuffleWord(word);
                 pointCounter++;
-                System.out.println("Good work your score is now " + pointCounter);
-
             }
-            else
-            {
-                System.out.println("You are not very good at this game are you. Your score is still " + pointCounter);
-            }
-            System.out.println("If you would like to stop playing type No or just hit enter to keep going");
-            userInput = scan.nextLine();
+            System.out.println(shuffled + pointCounter);
 
-        }
-        while (!userInput.equalsIgnoreCase("No"));
 
-        scan.close();
     }
 
 
@@ -59,4 +50,6 @@ public class WordScramble {
     {
         return word.equalsIgnoreCase(guess);
     }
+
+
 }
