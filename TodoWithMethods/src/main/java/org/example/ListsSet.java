@@ -32,7 +32,7 @@ public class ListsSet {
                         removeTask(scan);
                         break;
                     case 3:
-                        displayTasks();
+                        displayTasks();≤≤
                         System.out.println("Please hit enter to coninue");
                         String nothing = scan.nextLine();
                         break;
