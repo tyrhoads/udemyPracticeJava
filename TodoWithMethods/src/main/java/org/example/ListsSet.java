@@ -9,7 +9,7 @@ public class ListsSet {
 
     public ListsSet()
     {
-        todoList.add(" ");
+        todoList.add("Have fun");
 
     }
     public void manageTodoList()
@@ -22,24 +22,33 @@ public class ListsSet {
             displayMenu();
             int choice = scan.nextInt();
             scan.nextLine();
-            switch (choice)
+            if (choice >0 && choice<5  )
             {
-                case 1:
-                    addTask(scan);
-                    break;
-                case 2:
-                    removeTask(scan);
-                    break;
-                case 3:
-                    displayTasks();
-                    break;
-                case 4:
-                    System.out.println("Thank you for using my toDo list app");
-                    return;
+                switch (choice) {
+                    case 1:
+                        addTask(scan);
+                        break;
+                    case 2:
+                        removeTask(scan);
+                        break;
+                    case 3:
+                        displayTasks();
+                        System.out.println("Please hit enter to coninue");
+                        String nothing = scan.nextLine();
+                        break;
+                    case 4:
+                        System.out.println("Thank you for using my toDo list app");
+                        return;
+                    default:
+                        System.out.println("please make sure the number is between 1-4");
 
+
+                }
 
             }
-
+            else {
+                System.out.println("Please enter a number");
+            }
         }
         while (true);
 
@@ -73,12 +82,26 @@ public class ListsSet {
     private void removeTask(Scanner scanner) {
         System.out.println("Please pick which task you would like to remove..");
         int removeWord = scanner.nextInt();
-        todoList.remove(removeWord);
+        removeWord -= 1;
+
+            System.out.println("removing " + todoList.get(removeWord));
+            todoList.remove(removeWord-1);
+
+
     }
 
     // Method to display all tasks in the TODO list
-    private void displayTasks() {
-        //TODO
+    private void displayTasks()
+    {
+        int j = 1;
+        for (int i = 0; i< todoList.size(); i++)
+        {
+
+            System.out.println( j + ": " +todoList.get(i));
+            j ++;
+        }
+
+
     }
 }
 
