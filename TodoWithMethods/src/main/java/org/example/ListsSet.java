@@ -38,6 +38,7 @@ public class ListsSet {
                         break;
                     case 4:
                         System.out.println("Thank you for using my toDo list app");
+                        scan.close();
                         return;
                     default:
                         System.out.println("please make sure the number is between 1-4");
@@ -49,19 +50,12 @@ public class ListsSet {
             else {
                 System.out.println("Please enter a number");
             }
+
         }
         while (true);
 
-        // Display the menu options
-        // Consume the newline character
-        // Handle the menu choice
-        //TODO
     }
-//TODO List Menu:
-//1. Add a task
-//2. Remove a task
-//3. Display tasks
-//4. Exit
+
     // Method to display the menu
     private void displayMenu() {
         System.out.print("""
