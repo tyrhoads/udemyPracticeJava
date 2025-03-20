@@ -1,7 +1,9 @@
 import java.util.Scanner;
 
-public class EncoderDecoderGame {
-    public static void main(String[] args) {
+public class EncoderDecoderGame
+{
+    public static void main(String[] args)
+    {
         Scanner scanner = new Scanner(System.in);
 
         // Step 1: Display menu
@@ -18,11 +20,11 @@ public class EncoderDecoderGame {
 
         if (choice == 1) {
             // Step 3: Call encode function and display result (COMPLETE THIS PART)
-            String encodedString = // COMPLETE THIS PART
+            String encodedString = encode(input,0);
                     System.out.println("Encoded string: " + encodedString);
         } else if (choice == 2) {
             // Step 4: Call decode function and display result (COMPLETE THIS PART)
-            String decodedString = // COMPLETE THIS PART
+            String decodedString = decode(input,0);
                     System.out.println("Decoded string: " + decodedString);
         } else {
             System.out.println("Invalid choice!");
@@ -32,30 +34,42 @@ public class EncoderDecoderGame {
     }
 
     // Step 5: Recursive function to encode a string using Atbash cipher
-    public static String encode(String input, int index) {
-        if (// COMPLETE THIS PART) {
+    public static String encode(String input, int index)
+    {
+
+        if (index == input.length())
+        {
         return "";
-    }
+        }
     char ch = input.charAt(index);
     char encodedChar = atbash(ch);
             return encodedChar + encode(input, index + 1);
-}
+    }
 
-// Step 6: Recursive function to decode a string using Atbash cipher (same as encoding)
-public static String decode(String input, int index) {
-    return // COMPLETE THIS PART
-}
+    // Step 6: Recursive function to decode a string using Atbash cipher (same as encoding)
+    public static String decode(String input, int index)
+    {
+    return encode(input,index);
+    }
 
-// Step 7: Function to apply Atbash cipher to a character
-public static char atbash(char ch) {
-    if (// COMPLETE THIS PART) {
-    return (char) ('z' - (ch - 'a'));
-} else if (// COMPLETE THIS PART) {
-        return (char) ('Z' - (ch - 'A'));
-        } else {
-        return ch;
-            }
-                    }
-                    }
+    // Step 7: Function to apply Atbash cipher to a character
+    public static char atbash(char ch)
+    {
+        //todo
+        if (ch >='a' &&  ch<='z')
+        {
+            return (char) ('z' - (ch - 'a'));
+        }
+        //todo
+        else if (ch >='A' &&  ch<='Z')
+        {
+            return (char) ('Z' - (ch - 'A'));
+        }
+        else
+        {
+            return ch;
+        }
+    }
+}
 
 
