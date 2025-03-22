@@ -8,6 +8,9 @@ public class Student
     // Constructor to initialize Student object
     public Student(String name, int rollNumber, int age, double height)
     {
-        // COMPLETE THIS PART
+        this.name =name;
+        this.rollNumber = rollNumber;
+        this.age = age;
+        this.height = height;
     }
 }
