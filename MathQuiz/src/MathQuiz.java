@@ -1,16 +1,19 @@
 import java.util.Scanner;
 
-public class MathQuiz {
+public class MathQuiz
+{
 
         private int score;
 
         // Constructor to initialize the score
-        public MathQuiz() {
+        public MathQuiz()
+        {
             this.score = 0;
         }
 
         // Step 6: Implement method to start the quiz
-        public void startQuiz() {
+        public void startQuiz()
+        {
             Scanner scanner = new Scanner(System.in);
             for (int i = 0; i < 5; i++) { // 5 questions per quiz
                 askQuestion(scanner);
@@ -29,9 +32,10 @@ public class MathQuiz {
             if (question.checkAnswer(userAnswer)) {
                 System.out.println("Correct!");
                 score++;
-            } else {
+            } else
+            {
                 System.out.println("Incorrect.");
             }
         }
-    }
+}
 
