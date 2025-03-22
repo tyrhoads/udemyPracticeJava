@@ -1,14 +1,17 @@
 import java.util.Random;
 
-public class Questions {
-    public class Question {
+public class Questions
+{
+    public static class Question
+    {
         private int operand1;
         private int operand2;
         private char operator;
         private double correctAnswer;
 
         // Constructor to generate a random arithmetic question
-        public Question() {
+        public Question()
+        {
             Random rand = new Random();
             this.operand1 = rand.nextInt(100) + 1;
             this.operand2 = rand.nextInt(100) + 1;
@@ -18,25 +21,30 @@ public class Questions {
         }
 
         // Step 2: Implement method to calculate the correct answer
-        private void calculateAnswer() {
-            switch (operator) {
+        private void calculateAnswer()
+        {
+            switch (operator)
+            {
                 case '+':
-                    correctAnswer = // COMPLETE THIS PART;
+                    correctAnswer = operand1+operand2;
                     break;
                 case '-':
-                    correctAnswer = // COMPLETE THIS PART;
+                    correctAnswer = operand1-operand2;
                     break;
                 case '*':
-                    correctAnswer = // COMPLETE THIS PART;
+                    correctAnswer = operand1*operand2 ;
                     break;
                 case '/':
-                    correctAnswer = // COMPLETE THIS PART;
+                    correctAnswer = (double) operand1 /operand2 ;
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + operator);
             }
         }
 
         // Step 3: Method to display the generated question
-        public void generateQuestion() {
+        public void generateQuestion()
+        {
             System.out.println("What is " + operand1 + " " + operator + " " + operand2 + "?");
         }
 
