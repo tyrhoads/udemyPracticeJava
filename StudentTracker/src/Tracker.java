@@ -1,10 +1,10 @@
 import java.util.Scanner;
 
-public class Tracker {
+public class Tracker
+{
 
-
-
-    public void gradesTrackerApp() {
+    public static void main(String[] args)
+    {
         // Initialize students array
         Student[] students = new Student[3];
         Scanner scanner = new Scanner(System.in);
@@ -13,15 +13,22 @@ public class Tracker {
 
         // Loop to create and populate student objects
         for (int i = 0; i < students.length; i++) {
-            // Consume newline character
-            // Create a new Student object and add it to the array
-            //TODO
+
+            System.out.println("Enter details for student " + (i +1) + ":");
+            System.out.print("Name: ");
+            String name =scanner.nextLine();
+            System.out.print("Grade: ");
+            double grade =scanner.nextDouble();
+            scanner.nextLine();
+            students[i] = new Student(name,grade);
+
         }
 
-        // Display student details
-        //TODO
+        for (Student student : students) {
+            System.out.print(student.getDetails());
+        }
     }
 }
 
 
-}
+
