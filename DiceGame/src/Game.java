@@ -2,15 +2,15 @@ import java.util.Scanner;
 
 public class Game
 {
-    private Dice dice1;
-    private Dice dice2;
+    private Dice dice1 = new Dice();
+    private Dice dice2 = new Dice();
     private int score;
     private int targetScore;
 
     // Step 4: Constructor to initialize the game with a target score
     public Game(int targetScore)
     {
-        // COMPLETE THIS PART
+        this.targetScore = targetScore;
     }
 
     // Step 5: Method to roll both dice and update the score
@@ -22,12 +22,12 @@ public class Game
         System.out.println("Dice 2: " + dice2.getValue());
 
         // COMPLETE THIS PART: Add values to score
-
+        score += dice1.getValue()+dice2.getValue();
         // Step 6: Check for doubles and add bonus points
-        if ()
+        if (dice1.getValue() == dice2.getValue())
         {
         System.out.println("You rolled a double! Bonus points added.");
-        // COMPLETE THIS PART: Add bonus points
+        score += 4;
         }
     }
 
@@ -41,7 +41,7 @@ public class Game
     // Step 8: Method to check if the target score is reached
     public boolean isTargetReached()
     {
-    return true;
+        return score >= targetScore;
     }
 }
 
