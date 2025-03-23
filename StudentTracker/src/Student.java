@@ -1,37 +1,34 @@
 // Class to represent a Student
-class Student
-{
-    private String name;
+class Student {
     private double grade;
-
+    private String name;
 
     // Parameterized constructor
-    public Student(String name, double grade)
-    {
-        this.name= name;
-        this.grade =grade;
+    public Student(String name, double grade) {
+        this.grade = grade;
+        this.name = name;
     }
 
     // Method to get student details
     public String getDetails()
     {
-        //TODO
+        return "Name: " + name + ", Grade: " + grade+ "\n";
     }
 
     // Setters and getters (optional for this exercise)
-    public void setName(String name)
-    {
-        //TODO
+    public void setName(String name) {
+        this.name = name;
     }
 
     public void setGrade(double grade) {
-        //TODO
+        this.grade = grade;
     }
 
     public String getName() {
-        return //TODO;
+        return name;
     }
 
     public double getGrade() {
-        return //TODO;
+        return grade;
     }
+}
