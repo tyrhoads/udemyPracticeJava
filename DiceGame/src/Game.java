@@ -2,14 +2,17 @@ import java.util.Scanner;
 
 public class Game
 {
-    private Dice dice1 = new Dice();
-    private Dice dice2 = new Dice();
+    private Dice dice1;
+    private Dice dice2;
     private int score;
     private int targetScore;
 
     // Step 4: Constructor to initialize the game with a target score
     public Game(int targetScore)
     {
+        this.score=0;
+        this.dice1 = new Dice();
+        this.dice2 = new Dice();
         this.targetScore = targetScore;
     }
 
