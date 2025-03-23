@@ -2,9 +2,16 @@ public class Animal
 {
     private String name;
 
-    // Constructor
-    //TODO
+    public Animal(String name)
+    {
+        this.name=name;
+    }
 
-    // Method to get animal details
-    //TODO
+
+
+    protected String getName()
+    {
+        return name;
+    }
+
 }
