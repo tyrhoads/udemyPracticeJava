@@ -7,12 +7,11 @@ public class EmployeeTrackerApp
         Employee emp2 = new Employee("Bob", "Engineering");
         Employee emp3 = new Employee("Charlie", "Finance");
 
-        System.out.print(emp1.getDetails());
-        System.out.print(emp2.getDetails());
-        System.out.print(emp3.getDetails());
+        System.out.println(emp1.getDetails());
+        System.out.println(emp2.getDetails());
+        System.out.println(emp3.getDetails());
 
-        // Display total number of employees using a static method
-        //TODO
+        System.out.print("Total Number of employees: " + Employee.getTotalEmployees());
     }
 }
 
