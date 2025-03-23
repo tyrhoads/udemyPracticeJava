@@ -14,7 +14,7 @@ class Game
             this.reveledLetters= new char[wordToGuess.length()];
             for (int i=0; i<wordToGuess.length(); i++)
             {
-                reveledLetters[i] = '-';
+                reveledLetters[i] = '*';
             }
         }
 
@@ -23,6 +23,15 @@ class Game
         System.out.println("Welcome To the word guessing Game:");
         System.out.println("Time to try and guess the word:");
 
+    }
+    public void displayHint()
+    {
+        System.out.println("The Number of letters in the word is: " + wordToGuess.length());
+    }
+
+    public String getRevealedWord() {
+
+        return new String(reveledLetters);
     }
 
 }
