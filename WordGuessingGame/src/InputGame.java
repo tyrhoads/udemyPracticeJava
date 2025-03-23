@@ -1,0 +1,4 @@
+class InputGame extends Game
+{
+
+}
