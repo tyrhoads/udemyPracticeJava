@@ -7,19 +7,19 @@ public class Dice
     // Step 1: Default Constructor to initialize dice
     public Dice()
     {
-        // COMPLETE THIS PART
+        this.value =1;
     }
 
     // Step 2: Method to roll the dice
     public void roll()
     {
         Random rand = new Random();
-        // COMPLETE THIS PART
+       value =  rand.nextInt(6) +1;
     }
 
     // Step 3: Method to get the current value of the dice
     public int getValue()
     {
-        return 1; // COMPLETE THIS PART;
+        return value;
     }
 }
