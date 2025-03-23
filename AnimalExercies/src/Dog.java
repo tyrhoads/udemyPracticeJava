@@ -5,10 +5,17 @@
      // Constructor using super to call the parent class constructor
      // Call the parent class constructor
      //TODO
+     Dog( String name,String breed)
+     {
+         super(name);
+         this.breed =breed;
+     }
 
-     // Getter for breed
-     //TODO
 
+     private String getBreed()
+     {
+         return breed;
+     }
      // Method to display details using parent and child attributes
      public void displayDetails() {
          System.out.println("Dog's Name: " + getName());
