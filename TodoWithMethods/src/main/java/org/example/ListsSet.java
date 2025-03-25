@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class ListsSet {
     // Declare a global ArrayList to store the TODO list
-    private ArrayList<String> todoList = new ArrayList<>();
+    private final ArrayList<String> todoList = new ArrayList<>();
 
     public ListsSet()
     {
@@ -32,9 +32,9 @@ public class ListsSet {
                         removeTask(scan);
                         break;
                     case 3:
-                        displayTasks();≤≤
-                        System.out.println("Please hit enter to coninue");
-                        String nothing = scan.nextLine();
+                        displayTasks();
+                        System.out.println("Please hit enter to continue");
+                        scan.nextLine();
                         break;
                     case 4:
                         System.out.println("Thank you for using my toDo list app");

@@ -1,7 +1,7 @@
-import java.util.Locale;
 import java.util.Scanner;
 
-public class GalaxyWeatherAdvisor {
+public class GalaxyWeatherAdvisor
+{
 
     public static void main(String[] args) {
         // Step 1: Declare and initialize Scanner object
@@ -20,8 +20,8 @@ public class GalaxyWeatherAdvisor {
         scan.nextLine();
 
 
-                // Step 5: Declare a variable to store response
-                String advice = "";
+
+                String advice;
 
         // Step 6: Compute response based on planet and temperature
        if (planet.equalsIgnoreCase("earth"))

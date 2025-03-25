@@ -3,7 +3,7 @@ public class Employee
 
     private String name;
     private String department;
-    private static int employeeNumber;
+    private static int employeeNumber =0;
 
     // Constructor using this keyword
     public Employee(String name, String department) {
@@ -16,7 +16,7 @@ public class Employee
     // Method to get employee details using this keyword
     public String getDetails()
     {
-        return "Name: " + this.name + " Department: " + this.department + " Employee Number: " + employeeNumber;
+        return "Name: " + this.name + " Department: " + this.department;
     }
 
     // Static method to get the total number of employees
