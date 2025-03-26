@@ -8,7 +8,8 @@ abstract public class BankAccount
         this.accountNumber = accountNumber;
         this. balance = balance;
     }
-    abstract public void withdraw(double amount);
+
+
     public double getBalance()
     {
         return balance;
@@ -18,4 +19,11 @@ abstract public class BankAccount
     {
         balance += amount;
     }
+
+    public String getAccountNumber()
+    {
+        return accountNumber;
+    }
+
+    abstract public void withdraw(double amount);
 }
