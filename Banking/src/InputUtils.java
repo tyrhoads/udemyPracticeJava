@@ -35,4 +35,8 @@ public class InputUtils
         scanner.nextLine();
         return value;
     }
+    public void print(String input)
+    {
+        System.out.println(input);
+    }
 }
