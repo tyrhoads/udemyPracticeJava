@@ -12,7 +12,12 @@ public class SavingsAccount extends BankAccount
         if(currentBalance>amount)
         {
             System.out.println("Withdrawing " + amount+ " from your account.");
+            deposit(-amount);
 
+        }
+        else
+        {
+            System.out.println("Insufficient funds");
         }
     }
 
