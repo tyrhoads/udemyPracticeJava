@@ -42,6 +42,8 @@ public class BankService
         }
         tool.print("Account created");
     }
+
+
     private BankAccount findAccount()
     {
         tool.print("Please enter account number");
@@ -55,6 +57,30 @@ public class BankService
             }
         tool.print("Account not found");
         return null;
+    }
+
+    public void checkBalance()
+    {
+        BankAccount currentAccount = findAccount();
+
+        if(currentAccount != null)
+        {
+            double currentBalance = currentAccount.getBalance();
+            tool.print("The current balance for this account is: $" + currentBalance);
+        }
+
+    }
+
+    public void withDrawMoney()
+    {
+        BankAccount currentAccount = findAccount();
+
+        if(currentAccount != null)
+        {
+            tool.print("Please enter the amount you would like to withdraw from you account: ");
+            double amount = tool.readDouble();
+            currentAccount.withdraw(amount);
+        }
     }
 
 
