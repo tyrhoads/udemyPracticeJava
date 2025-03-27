@@ -83,5 +83,16 @@ public class BankService
         }
     }
 
+    public void  depositMoney()
+    {
+        BankAccount currentAccount = findAccount();
+        if(currentAccount != null)
+        {
+            tool.print("Please enter the amount you would like to deposit to your you account: ");
+            double amount = tool.readDouble();
+            currentAccount.deposit(amount);
+        }
+
+    }
 
 }
