@@ -1,4 +1,5 @@
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class UniqueNames<S> {
 
@@ -6,13 +7,22 @@ public class UniqueNames<S> {
     {
         HashSet<String> set = new HashSet<>();
 
-        // Add names to the HashSet and include a Duplicate entry
-        //TODO
+        set.add("Alice");
+        set.add( "Bob");
+        set.add( "Alice");
+        set.add( "Charlie");
+        set.add( "Bob");
+
 
         // Display the names in the HashSet
         System.out.println("Unique Names:");
         //TODO
+        Iterator<String> iterator = set.iterator();
 
+        while (iterator.hasNext())
+        {
+            System.out.println(iterator.next());
+        }
     }
 
 }
