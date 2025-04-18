@@ -4,8 +4,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.util.Optional;
 
 public class FormController {
 
@@ -32,9 +35,9 @@ public class FormController {
 
     private void handleSubmit() {
         if (firstNameField.getText().isEmpty() || lastNameField.getText().isEmpty() || emailField.getText().isEmpty()) {
-            // COMPLETE THIS: Show an alert if the form is incomplete
+            showAlert("Form incomplete" , "Please fill it out");
         } else {
-            // COMPLETE THIS: Show a confirmation dialog
+            showConfirmationDialog();
         }
     }
 
@@ -51,6 +54,22 @@ public class FormController {
     }
 
     private void showConfirmationDialog() {
-        // COMPLETE THIS: Implement the confirmation dialog logic
-    }
+        Alert contfirmationDialog = new Alert(AlertType.CONFIRMATION);
+        contfirmationDialog.setTitle("Confirmed");
+        contfirmationDialog.setHeaderText("Please Confirm");
+        contfirmationDialog.setContentText("First Name: " + firstNameField.getText() + "\n"
+                + "Last Name: " + lastNameField.getText() + "\n"
+                + "Email: " + emailField.getText());
+
+        ButtonType okButton = new ButtonType("OK");
+        ButtonType cancelButton = new ButtonType("Cancel");
+
+        contfirmationDialog.getButtonTypes().setAll(okButton, cancelButton);
+
+        Optional<ButtonType> result = contfirmationDialog.showAndWait();
+        if (result.isPresent() && result.get() == okButton) {
+            handleCancel(); // Close the program
+
+        }
+}
 }
