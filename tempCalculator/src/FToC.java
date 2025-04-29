@@ -20,8 +20,15 @@ public class FToC
             switch (userInput)
             {
                 case 1:
+                    fahrenheit = getTemp(scan);
+                    celsius = (5.0/9.0) * (fahrenheit - 32.0);
+                    System.out.printf("%.2f is %.2f in celsius%n", fahrenheit, celsius);
                     break;
                 case 2:
+                    celsius = getTemp(scan);
+                    fahrenheit = (9.0/5.0 * celsius) + 32.0;
+                    System.out.println(celsius + " is " + fahrenheit + " in celsius");
+
                     break;
                 case 0:
                     System.out.println("Thank you for using.");
@@ -35,7 +42,7 @@ public class FToC
 
     }
 
-    public double getTemp(Scanner scan)
+    public static double getTemp(Scanner scan)
     {
         System.out.println("Please enter temperature.");
         return scan.nextDouble();
