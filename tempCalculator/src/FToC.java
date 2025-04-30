@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class FToC
@@ -42,9 +43,19 @@ public class FToC
 
     }
 
-    public static double getTemp(Scanner scan)
-    {
-        System.out.println("Please enter temperature.");
-        return scan.nextDouble();
+    public static double getTemp(Scanner scan) {
+        double temp = 0;
+        boolean valid = false;
+        while (!valid) {
+            System.out.println("Please enter temperature:");
+            try {
+                temp = scan.nextDouble();
+                valid = true; // valid input received, exit loop
+            } catch (InputMismatchException e) {
+                System.out.println("Invalid entry. Please enter a valid number.");
+                scan.next(); // clear invalid input
+            }
+        }
+        return temp;
     }
 }
